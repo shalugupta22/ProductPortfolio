@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shalu Gupta - Executive Product Leadership Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #ffffff;
+        }
+
+        /* Navigation - Executive Style */
+        nav {
+            background: #0f2847;
+            padding: 1.2rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        nav .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav h1 {
+            color: white;
+            font-size: 1.3rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        nav a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            margin-left: 2.5rem;
+            transition: color 0.3s;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 3rem;
+        }
+
+        /* Hero Section - Executive Focus */
+        .hero {
+            background: linear-gradient(135deg, #0f2847 0%, #1a3a52 100%);
+            color: white;
+            padding: 5rem 3rem;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .hero h2 {
+            font-size: 1.3rem;
+            color: #64b5f6;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+        }
+
+        .hero p {
+            font-size: 1rem;
+            opacity: 0.95;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .hero-metrics {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .hero-metric {
+            background: rgba(255,255,255,0.1);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #64b5f6;
+            backdrop-filter: blur(10px);
+        }
+
+        .hero-metric-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #64b5f6;
+        }
+
+        .hero-metric-label {
+            font-size: 0.85rem;
+            opacity: 0.9;
+            margin-top: 0.5rem;
+        }
+
+        .cta-section {
+            margin-top: 2rem;
+        }
+
+        .cta-button-primary {
+            background: #64b5f6;
+            color: #0f2847;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 6px;
+            font-weight: 700;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-button-primary:hover {
+            background: #42a5f5;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(100, 181, 246, 0.3);
+        }
+
+        /* Key Metrics - Executive Focus */
+        .key-metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            padding: 3rem 0;
+            margin: 4rem 0;
+        }
+
+        .metric-card {
+            background: linear-gradient(135deg, #f5f7fa 0%, #ffffff 100%);
+            padding: 2.5rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+            border-top: 4px solid #0f2847;
+        }
+
+        .metric-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.12);
+        }
+
+        .metric-value {
+            font-size: 3rem;
+            color: #0f2847;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .metric-value.positive {
+            color: #00a86b;
+        }
+
+        .metric-label {
+            color: #333;
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .metric-description {
+            color: #666;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+
+        /* Section Headers */
+        .section {
+            padding: 4rem 0;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .section h2 {
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            color: #0f2847;
+            font-weight: 700;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .section h2::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: #64b5f6;
+            border-radius: 2px;
+        }
+
+        /* Executive Summary Box */
+        .executive-summary {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+            padding: 3rem;
+            border-radius: 10px;
+            border-left: 5px solid #0f2847;
+            margin-bottom: 3rem;
+        }
+
+        .executive-summary h3 {
+            color: #0f2847;
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .executive-summary p {
+            color: #333;
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .summary-highlights {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .summary-item {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .summary-icon {
+            color: #0f2847;
+            font-size: 1.5rem;
+            font-weight: bold;
+            min-width: 30px;
+        }
+
+        .summary-text {
+            color: #333;
+        }
+
+        /* Case Studies */
+        .case-study {
+            background: white;
+            border-radius: 10px;
+            padding: 3rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            border-left: 5px solid #0f2847;
+            transition: all 0.3s;
+        }
+
+        .case-study:hover {
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+            transform: translateY(-4px);
+        }
+
+        .case-study h3 {
+            color: #0f2847;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .case-study .company {
+            color: #64b5f6;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+
+        .case-study p {
+            margin-bottom: 1rem;
+            color: #333;
+            line-height: 1.8;
+        }
+
+        .impact-metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+            padding: 2rem 0;
+            border-top: 1px solid #e0e0e0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .impact-metric {
+            background: #f5f7fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            border-top: 3px solid #0f2847;
+        }
+
+        .impact-metric-value {
+            font-size: 1.8rem;
+            color: #00a86b;
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+        }
+
+        .impact-metric-label {
+            font-size: 0.8rem;
+            color: #666;
+            font-weight: 600;
+        }
+
+        .case-study-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin-top: 1.5rem;
+        }
+
+        .tag {
+            background: #e3f2fd;
+            color: #0f2847;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        /* Skills Section */
+        .leadership-focus {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .leadership-card {
+            background: linear-gradient(135deg, #f5f7fa 0%, #ffffff 100%);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            border-top: 4px solid #0f2847;
+        }
+
+        .leadership-card h4 {
+            color: #0f2847;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        .leadership-card ul {
+            list-style: none;
+        }
+
+        .leadership-card li {
+            padding: 0.6rem 0;
+            color: #333;
+            padding-left: 1.5rem;
+            position: relative;
+            font-size: 0.95rem;
+        }
+
+        .leadership-card li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #00a86b;
+            font-weight: bold;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding: 2rem 0;
+        }
+
+        .timeline-item {
+            margin-bottom: 3rem;
+            position: relative;
+            padding-left: 2rem;
+            border-left: 3px solid #64b5f6;
+        }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background: #0f2847;
+            border-radius: 50%;
+            left: -9px;
+            top: 0;
+            border: 3px solid white;
+            box-shadow: 0 0 0 3px #64b5f6;
+        }
+
+        .timeline-date {
+            color: #64b5f6;
+            font-size: 0.9rem;
+            font-weight: 700;
+        }
+
+        .timeline-title {
+            color: #0f2847;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0.5rem 0;
+        }
+
+        .timeline-description {
+            color: #666;
+        }
+
+        /* Education Section */
+        .education-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .education-card {
+            background: linear-gradient(135deg, #f5f7fa 0%, #ffffff 100%);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            text-align: center;
+            border-top: 4px solid #0f2847;
+        }
+
+        .education-card h4 {
+            color: #0f2847;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .education-card p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #0f2847;
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        footer p {
+            opacity: 0.9;
+            margin-bottom: 0.5rem;
+        }
+
+        footer a {
+            color: #64b5f6;
+            text-decoration: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            nav .container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav a {
+                margin-left: 0;
+            }
+
+            .container {
+                padding: 0 1.5rem;
+            }
+
+            .summary-highlights {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <h1>Shalu Gupta</h1>
+            <div>
+                <a href="#executive-summary">Overview</a>
+                <a href="#impact">Business Impact</a>
+                <a href="#experience">Experience</a>
+                <a href="#leadership">Leadership</a>
+                <a href="#education">Certificates</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div>
+                    <h1>Shalu Gupta</h1>
+                    <h2>Product Manager | IoT & AI/ML Platforms</h2>
+                    <p>Product Manager driving enterprise-scale IoT and AI/ML platforms with proven track record of 95% improvement in customer adoption and 40% organizational efficiency gains.</p>
+                    <div class="cta-section">
+                        <a href="mailto:shalugupta22@gmail.com?subject=Interview%20Request%20-%20Shalu%20Gupta" class="cta-button-primary">Schedule Interview</a>
+                    </div>
+                </div>
+                <div class="hero-metrics">
+                    <div class="hero-metric">
+                        <div class="hero-metric-value">9+</div>
+                        <div class="hero-metric-label">Years Leading Product</div>
+                    </div>
+                    <div class="hero-metric">
+                        <div class="hero-metric-value">$50M+</div>
+                        <div class="hero-metric-label">Platform Revenue Impact</div>
+                    </div>
+                    <div class="hero-metric">
+                        <div class="hero-metric-value">50K+</div>
+                        <div class="hero-metric-label">IoT Signals Unified</div>
+                    </div>
+                    <div class="hero-metric">
+                        <div class="hero-metric-value">13</div>
+                        <div class="hero-metric-label">Cross-Functional Leaders</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Executive Summary -->
+    <section class="section container" id="executive-summary">
+        <h2>Executive Summary</h2>
+        <div class="executive-summary">
+            <h3>Proven Leader in Building and Scaling Enterprise AI/ML IoT Platforms</h3>
+            <p>
+                Senior product executive with 15+ years in software and 9+ years leading product strategy at enterprise scale. 
+                Specialized in transforming raw IoT telemetry into high-confidence, actionable intelligence for building operations, energy optimization, and predictive maintenance. 
+                Demonstrated ability to drive organizational transformation, build trusted AI/ML systems, and deliver products with measurable business impact.
+            </p>
+            
+            <div class="summary-highlights">
+                <div class="summary-item">
+                    <div class="summary-icon">✓</div>
+                    <div class="summary-text">
+                        <strong>Revenue & Scale:</strong> Built intelligence layers processing 50,000+ heterogeneous signals generating millions in optimization value
+                    </div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-icon">✓</div>
+                    <div class="summary-text">
+                        <strong>Trust & Adoption:</strong> Grew enterprise adoption from 20% to 90% by building AI systems customers trust implicitly
+                    </div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-icon">✓</div>
+                    <div class="summary-text">
+                        <strong>Organizational Efficiency:</strong> Delivered 40% headcount reduction and 95% support ticket reduction through intelligent automation
+                    </div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-icon">✓</div>
+                    <div class="summary-text">
+                        <strong>Team Leadership:</strong> Led 13-person cross-functional teams (Engineering, Data Science, Security, GTM) in SAFe environment
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Business Impact Metrics -->
+    <section class="section container" id="impact">
+        <h2>Measurable Business Impact</h2>
+        <div class="key-metrics">
+            <div class="metric-card">
+                <div class="metric-value positive">40%→3%</div>
+                <div class="metric-label">Alert Override Rate</div>
+                <div class="metric-description">Reduced false positives via ML confidence scoring, establishing customer trust in AI-driven alerts</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value positive">4.5x</div>
+                <div class="metric-label">Adoption Growth</div>
+                <div class="metric-description">Scaled enterprise adoption from 20% to 90% across global portfolio through human-in-the-loop intelligence design</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value positive">95%</div>
+                <div class="metric-label">Faster Onboarding</div>
+                <div class="metric-description">Reduced customer setup from 2 weeks to 4 hours using supervised ML asset classification (85% accuracy)</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value positive">40%</div>
+                <div class="metric-label">Operations Headcount Reduction</div>
+                <div class="metric-description">Converted platform to self-serve, eliminating manual operations and reducing field support burden</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value positive">95%</div>
+                <div class="metric-label">Support Ticket Reduction</div>
+                <div class="metric-description">Intelligent automation and self-service platform reduced support escalations by 95%, improving customer satisfaction</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value positive">7.5x</div>
+                <div class="metric-label">User Growth (SaaS Launch)</div>
+                <div class="metric-description">Scaled 0-to-1 SaaS platform from 20 to 150 users in 12 months, achieving 4-star rating across US/Canada</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Career Experience -->
+    <section class="section container" id="experience">
+        <h2>Professional Experience</h2>
+
+        <!-- Honeywell Case Study -->
+        <div class="case-study">
+            <h3>Senior Advanced Technical PM - IoT Asset Intelligence & Energy Optimization</h3>
+            <div class="company">Honeywell | Nov 2021 – Present (2.5 years)</div>
+            
+            <p>
+                <strong>Business Challenge:</strong> Enterprise customers managing 50,000+ heterogeneous IoT signals across multi-vendor building hardware (HVAC, chillers, meters) lacked coherent asset intelligence. 40% of alerts were overridden (customers didn't trust the signals), adoption stuck at 20%, and onboarding took 2+ weeks.
+            </p>
+            
+            <p>
+                <strong>Strategic Response:</strong> Architected and led development of unified intelligence layer incorporating ML asset classification, confidence-scored alert systems, and human-in-the-loop validation to establish customer trust in AI-driven recommendations.
+            </p>
+            
+            <div class="impact-metrics">
+                <div class="impact-metric">
+                    <div class="impact-metric-value">40% → 3%</div>
+                    <div class="impact-metric-label">Alert Override Rate</div>
+                </div>
+                <div class="impact-metric">
+                    <div class="impact-metric-value">20% → 90%</div>
+                    <div class="impact-metric-label">Adoption Growth</div>
+                </div>
+                <div class="impact-metric">
+                    <div class="impact-metric-value">2w → 4h</div>
+                    <div class="impact-metric-label">Onboarding Speed</div>
+                </div>
+                <div class="impact-metric">
+                    <div class="impact-metric-value">40%</div>
+                    <div class="impact-metric-label">Headcount Reduction</div>
+                </div>
+                <div class="impact-metric">
+                    <div class="impact-metric-value">95%</div>
+                    <div class="impact-metric-label">Support Reduction</div>
+                </div>
+                <div class="impact-metric">
+                    <div class="impact-metric-value">$50M+</div>
+                    <div class="impact-metric-label">Revenue Impact</div>
+                </div>
+            </div>
+
+            <p style="margin-top: 2rem;">
+                <strong>Leadership Outcomes:</strong>
+                <ul style="margin: 1rem 0 0 1.5rem; color: #333;">
+                    <li>✓ Led 13-person cross-functional team (Engineering, Data Science, Security, GTM) in SAFe environment</li>
+                    <li>✓ Owned AI product strategy end-to-end: ML classification, MLOps governance, GenAI/LLM evaluation for natural-language asset querying</li>
+                    <li>✓ Drove decisions via product analytics and A/B testing (Mixpanel); established data-driven product culture</li>
+                    <li>✓ Integrated Neo4j semantic graph for building/asset topology → enabled root-cause localization and condition-based interventions</li>
+                    <li>✓ Shipped REST API + microservices integrations across Niagara, EBI, Forge Connect gateways; defined data contracts and telemetry pipelines</li>
+                </ul>
+            </p>
+
+            <div class="case-study-tags">
+                <span class="tag">Platform Leadership</span>
+                <span class="tag">AI/ML Strategy</span>
+                <span class="tag">Enterprise SaaS</span>
+                <span class="tag">Team Leadership</span>
+                <span class="tag">IoT Architecture</span>
+                <span class="tag">Go-to-Market</span>
+            </div>
+        </div>
+
+        <!-- Accion Labs Case Study -->
+        <div class="case-study">
+            <h3>Product Owner - 0-to-1 B2B SaaS Field-Service Platform Launch</h3>
+            <div class="company">Accion Labs | Jul 2020 – Nov 2021 (1.3 years)</div>
+            
+            <p>
+                <strong>Business Challenge:</strong> Greenfield SaaS product in competitive field-service market. No product-market fit signals, needed simultaneous US & Canada launch, and required cross-timezone team coordination.
+            </p>
+            
+            <p>
+                <strong>Strategic Response:</strong> Owned complete product lifecycle from vision through GTM. Conducted customer discovery, defined MVP, established go-to-market strategy, and led agile delivery across distributed teams.
+            </p>
+            
+            <div class="impact-metrics">
+                <div class="impact-metric">
+                    <div class="impact-metric-value">7.5x</div>
+                    <div class="impact-metric-label">User Growth</div>
+                </div>
+                <div class="impact-metric">
+                    <div class="impact-metric-value">20→150</div>
+                    <div class="impact-metric-label">Users in 12mo</div>
+                </div>
+                <div class="impact-metric">
+                    <div class="impact-metric-value">4 ⭐</div>
+                    <div class="impact-metric-label">App Store Rating</div>
+                </div>
+                <div class="impact-metric">
+                    <div class="impact-metric-value">65%</div>
+                    <div class="impact-metric-label">Feature Adoption</div>
+                </div>
+            </div>
+
+            <p style="margin-top: 2rem;">
+                <strong>Leadership Outcomes:</strong>
+                <ul style="margin: 1rem 0 0 1.5rem; color: #333;">
+                    <li>✓ Launched Cinch across US & Canada in <12 months, scaled from 20 to 150 users</li>
+                    <li>✓ Drove 65% adoption of real-time status updates (vs. 2-week approval cycle)</li>
+                    <li>✓ Owned product vision, MVP definition, roadmap, and GTM execution</li>
+                    <li>✓ Led BDD acceptance criteria and Agile ceremonies across distributed team</li>
+                </ul>
+            </p>
+
+            <div class="case-study-tags">
+                <span class="tag">0-to-1 Launch</span>
+                <span class="tag">Mobile SaaS</span>
+                <span class="tag">Product Strategy</span>
+                <span class="tag">Go-to-Market</span>
+                <span class="tag">Agile Leadership</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Focus -->
+    <section class="section container" id="leadership">
+        <h2>Core Leadership Competencies</h2>
+        
+        <div class="leadership-focus">
+            <div class="leadership-card">
+                <h4>🎯 Strategic Product Leadership</h4>
+                <ul>
+                    <li>Product Vision & Enterprise Roadmapping</li>
+                    <li>OKR Definition & Execution</li>
+                    <li>Go-to-Market Strategy & Execution</li>
+                    <li>0-to-1 Product Launches</li>
+                    <li>Competitive Strategy & Market Positioning</li>
+                    <li>M&A Product Integration</li>
+                </ul>
+            </div>
+
+            <div class="leadership-card">
+                <h4>👥 Organizational Leadership</h4>
+                <ul>
+                    <li>Cross-Functional Team Leadership</li>
+                    <li>Stakeholder Management & Influence</li>
+                    <li>SAFe & Agile Program Leadership</li>
+                    <li>Talent Development & Coaching</li>
+                    <li>Data-Driven Decision Culture</li>
+                    <li>Remote & Distributed Team Management</li>
+                </ul>
+            </div>
+
+            <div class="leadership-card">
+                <h4>🤖 AI/ML & Data Strategy</h4>
+                <ul>
+                    <li>ML Model Evaluation & Governance</li>
+                    <li>GenAI/LLM Integration Strategy</li>
+                    <li>Confidence Scoring & Trust Systems</li>
+                    <li>Human-in-the-Loop Design</li>
+                    <li>Anomaly Detection Architecture</li>
+                    <li>MLOps & Model Deployment</li>
+                </ul>
+            </div>
+
+            <div class="leadership-card">
+                <h4>🏗️ Technical Product Depth</h4>
+                <ul>
+                    <li>IoT Architecture & Data Modeling</li>
+                    <li>Cloud Platform Strategy (Azure)</li>
+                    <li>API Design & Microservices</li>
+                    <li>Database Architecture (Neo4j, SQL)</li>
+                    <li>Data Pipeline Design</li>
+                    <li>Real-Time Systems</li>
+                </ul>
+            </div>
+
+            <div class="leadership-card">
+                <h4>📊 Business Analytics & Metrics</h4>
+                <ul>
+                    <li>KPI Definition & Tracking</li>
+                    <li>Product Analytics & Dashboarding</li>
+                    <li>A/B Testing & Experimentation</li>
+                    <li>Revenue Impact Modeling</li>
+                    <li>Customer ROI Analysis</li>
+                    <li>Statistical Significance Testing</li>
+                </ul>
+            </div>
+
+            <div class="leadership-card">
+                <h4>🌍 Enterprise & Scale</h4>
+                <ul>
+                    <li>Enterprise Customer Management</li>
+                    <li>Global GTM Coordination</li>
+                    <li>GDPR & Data Compliance</li>
+                    <li>Security & Governance</li>
+                    <li>Multi-Tenancy Architecture</li>
+                    <li>Platform Scaling & Operations</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline -->
+    <section class="section container">
+        <h2>Career Timeline</h2>
+        
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-date">Nov 2021 – Present (2.5 yrs)</div>
+                <div class="timeline-title">Senior Advanced Technical PM – Honeywell</div>
+                <div class="timeline-description">
+                    Owned intelligence layer for IoT smart building platform serving 50,000+ signals. 
+                    Drove alert override reduction (40→3%), adoption growth (20→90%), and operational efficiency (40% headcount reduction).
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-date">Jul 2020 – Nov 2021 (1.3 yrs)</div>
+                <div class="timeline-title">Product Owner – Accion Labs</div>
+                <div class="timeline-description">
+                    Launched 0-to-1 B2B SaaS platform (Cinch) across US & Canada. 
+                    Scaled from 20 to 150 users in 12 months, achieved 4-star rating.
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-date">Dec 2018 – May 2020 (1.5 yrs)</div>
+                <div class="timeline-title">Product Owner – Genisys Group</div>
+                <div class="timeline-description">
+                    Remote Patient Monitoring SaaS. Delivered 5+ MVPs for rapid market launches. 
+                    Managed enterprise customer requirements and product analytics.
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-date">Jul 2016 – Jul 2018 (2 yrs)</div>
+                <div class="timeline-title">Senior Business Analyst – Amadeus Labs</div>
+                <div class="timeline-description">
+                    Airline eCommerce & recommendation systems. Improved ancillary revenue conversion 
+                    via data-driven product enhancements.
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-date">15+ years in software</div>
+                <div class="timeline-title">Earlier Career – Foundation Building</div>
+                <div class="timeline-description">
+                    Accenture, Ness, Qualitrix, and startups. Built foundation in software quality, 
+                    requirements engineering, and business analysis.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Certificates -->
+    <section class="section container" id="education">
+        <h2>Education & Certificates</h2>
+        
+        <div class="education-grid">
+            <div class="education-card">
+                <h4>MBA / PGDM</h4>
+                <p><strong>Information Technology</strong></p>
+                <p style="color: #999; font-size: 0.9rem;">Manipal University</p>
+            </div>
+            <div class="education-card">
+                <h4>BCA</h4>
+                <p><strong>Computer Science</strong></p>
+                <p style="color: #999; font-size: 0.9rem;">Bangalore University</p>
+            </div>
+            <div class="education-card">
+                <h4>CSPO</h4>
+                <p><strong>Certified Scrum Product Owner</strong></p>
+                <p style="color: #999; font-size: 0.9rem;">Scrum Alliance</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section container" id="contact">
+        <h2>Let's Connect</h2>
+        
+        <div class="executive-summary">
+            <h3>Ready for the Right Opportunity</h3>
+            <p>
+                I'm actively exploring Senior PM, Group PM, Lead PM, and VP-level Product roles 
+                in AI/ML, IoT, smart buildings, energy management, and enterprise B2B SaaS.
+            </p>
+            
+            <div style="margin-top: 2rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem;">
+                <div>
+                    <p style="color: #888; font-size: 0.9rem; margin-bottom: 0.5rem;">EMAIL</p>
+                    <p><a href="mailto:shalugupta22@gmail.com" style="color: #64b5f6; font-weight: 600; text-decoration: none;">shalugupta22@gmail.com</a></p>
+                </div>
+                <div>
+                    <p style="color: #888; font-size: 0.9rem; margin-bottom: 0.5rem;">PHONE</p>
+                    <p style="font-weight: 600; color: #333;">+91-7259808097</p>
+                </div>
+                <div>
+                    <p style="color: #888; font-size: 0.9rem; margin-bottom: 0.5rem;">LINKEDIN</p>
+                    <p><a href="https://linkedin.com/in/shalugupta22" target="_blank" style="color: #64b5f6; font-weight: 600; text-decoration: none;">linkedin.com/in/shalugupta22</a></p>
+                </div>
+                <div>
+                    <p style="color: #888; font-size: 0.9rem; margin-bottom: 0.5rem;">LOCATION</p>
+                    <p style="font-weight: 600; color: #333;">Bengaluru, India</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p><strong>Shalu Gupta</strong></p>
+            <p>Product Manager | IoT & AI/ML Platforms | Enterprise Scale</p>
+            <p style="margin-top: 1rem; font-size: 0.9rem;">Executive Portfolio | Updated June 2026</p>
+        </div>
+    </footer>
+
+</body>
+</html>
